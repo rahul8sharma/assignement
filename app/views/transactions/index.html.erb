@@ -1,0 +1,27 @@
+<header>
+  <%= render partial: 'navbar' %>
+  <!-- Jumbotron -->
+  <div class="p-3" style="background-color: #E4E7EB;">
+    <h1 class="mb-3">$4,909.75</h1>
+    <h4 class="mb-3 font-extralight">BALANCE</h4>
+  </div>
+  <!-- Jumbotron -->
+</header>
+
+<table class="table caption-top">
+  <caption ><h1>Past Transactions</h1></caption>
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Transaction</th>
+      <th scope="col"></th>
+      <th scope="col">Amount</th>
+      <th scope="col">Balance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @transactions.each do |transaction| %>
+      <%= render transaction %>
+    <% end %>
+  </tbody>
+</table>
